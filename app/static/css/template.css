@@ -8,7 +8,11 @@ body{
 
 
 /* The Style of The containers Side, we concider header and footer as containers aswell*/
-
+.container{
+    background: #213351;
+    height: 100%;
+    width : 100%;
+}
 .header{
     background: #0D1F42;
     width: 100%;
@@ -18,7 +22,7 @@ body{
     display: flex;
 }
 
-.container{
+.middle{
     background: red;
     width: 300px;
     height: 300px;
@@ -36,7 +40,7 @@ body{
     margin: 10px;
     padding: 10px;
     border: solid 1px black;
-    position: absolute;
+    
 }
 
 /* Inside containers divs style */
