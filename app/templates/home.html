@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <title>PyBot</title>
         <link rel="stylesheet" href="static/css/template.css">
+        <link rel="stylesheet" media="screen and (max-widdth: 1280px)" href="#">
         <link rel="icon" href="static/img/pybot.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,7 +22,18 @@
             </header>
         
             <div class="middle">
-                <div id = "cchild1">forms</div>
+                <div id = "cchild1">
+                    <form method="post"  action="traitement.php">
+                        <p>
+                            <textarea name="conversation"></textarea>
+                            
+                            
+                            <input type="text" name="pseudo" />
+                        
+                        
+                        </p>
+                    </form>
+                </div>
                 <div id = "cchild2">Maps</div>
             </div>    
 
