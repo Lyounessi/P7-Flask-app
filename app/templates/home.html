@@ -4,26 +4,26 @@
     <head>
         <meta charset="utf-8" />
         <title>PyBot</title>
-        <link rel="stylesheet" href="static/css/template.css">
+        <link rel="stylesheet" href='{{ url_for("static",filename = "css/template.css")}}'>
         <link rel="stylesheet" media="screen and (max-widdth: 1280px)" href="#">
-        <link rel="icon" href="static/img/pybot.png">
+        <link rel="icon" href='{{ url_for("static",filename = "img/pybot.png")}}'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
 
     <body>
-        <div class = "container">
+        <div class = "container" style= "background: url({{url_for('static', filename = 'img/ai.jpg')}}) no-repeat;">
         
             <header>
                 <div class="header">
-                    <div id = "hchild1"><img src="static/img/pybot.png" id = "pybot"></div>
+                    <div id = "hchild1"><img src='{{ url_for("static",filename = "img/pybot.png")}}' id = "pybot"></div>
                     <div id = "hchild2"><p id ="pbot">Welcome to The Grand_PyBot Experience</p></div>
                 </div>
             </header>
         
             <div class="middle">
                 <div id = "cchild1">
-                    <form method="post"  action="traitement.php">
+                    <form method="post"  action="#">
                         <p>
                             <textarea name="conversation"></textarea>
                             
@@ -45,8 +45,8 @@
                 
                     </div>
                     <div id = "fchild2"> 
-                        <a href="https://github.com/Lyounessi" target = "_blank"><img src="static/img/git.png"></a> 
-                        <a href="https://plus.google.com/u/0/109776314443043096266" target = "_blank"><img src="static/img/gplus.png"></a>
+                        <a href="https://github.com/Lyounessi" target = "_blank"><img src='{{ url_for("static",filename = "img/git.png")}}'</a> 
+                        <a href="https://plus.google.com/u/0/109776314443043096266" target = "_blank"><img src= '{{ url_for("static",filename = "img/gplus.png")}}'></a>
                     </div>
                 </div>
             </footer>
