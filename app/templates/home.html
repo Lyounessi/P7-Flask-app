@@ -12,22 +12,24 @@
     </head>
 
     <body>
-    <!-- style= "background: url({{url_for('static', filename = 'img/ai.jpg')}}) no-repeat;"-->
+    
         <div class = "container">
         
             <header>
                 <div class="header">
                     <div id = "hchild1"><img src='{{ url_for("static",filename = "img/pybot.png")}}' id = "pybot"></div>
                     <div id = "hchild2"><p id ="pbot">Welcome to The Grand_PyBot Experience</p></div>
+                    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
                 </div>
             </header>
         
             <div class="middle">
                 <div id = "cchild1">
+                 
                     <form method="POST"  action="/">
-                            <p id = "text" >{{response}}</p>
-                            <input type="text" name="ask" />
-                            <input type="submit" text = "valider">
+                            <div id = "boxanswers"><p>{{response}}</p></div>
+                            <input type="text" name="ask" id = "searchbar"/>
+                            <button type="submit" id = "searchButton">Envoyer</button>
                     </form>
                 </div>
                 <div id = "cchild2">Maps</div>
@@ -36,7 +38,7 @@
             <footer>
                 <div class="footer">
                     <div id = "fchild1"> 
-                        <p>All Right reserved</p>
+                        <p>&#169;All Right reserved</p>
                         <p>Boukroun Younes</p>
                 
                     </div>
@@ -48,6 +50,16 @@
             </footer>
             
         </div>
+
+        <script>
+        let myName = prompt("Name please !! ");
+        
+        document.cookie = "username = "+myName;
+        const x = document.cookie;
+
+        console.log(x);
+        
+        </script>
     </body>
 
   

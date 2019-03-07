@@ -1,3 +1,4 @@
-from app import routes, bot
+from app import routes
+
 
 routes.app.run(debug = False)
