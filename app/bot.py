@@ -55,7 +55,7 @@ class App():
         self.SelectWord()
 
         sendQts = self.result[0]
-        APIKEY = 'AIzaSyAVO3bsHT5e9zsllBpmclvrYyvaIJ-FSHE'
+        APIKEY = 'KeyCripted'
         base_url = "https://maps.googleapis.com/maps/api/geocode/json?address="+sendQts+"&key="+APIKEY
         request = requests.get(base_url)
         jsRequest = request.json()
