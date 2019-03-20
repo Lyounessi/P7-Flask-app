@@ -12,9 +12,10 @@ def index():
     
     if request.method == 'POST':
         MyApp = bot.App(request.form['ask'])
-        
+        MyApp.GooglGeo()
+        MyApp.GooglMapFrame()
         MyApp.ReadSW()
-        return render_template('home.html', response = MyApp.MediaWiki(request.cookies["username"]))
+        return render_template('home.html', response = MyApp.MediaWiki())
                     
     else:
         
@@ -23,4 +24,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

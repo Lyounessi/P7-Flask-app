@@ -37,6 +37,7 @@ body{
     padding: 0px;
     display: flex;
     justify-content: space-around;
+    position: relative;
 }
 
 
@@ -70,28 +71,15 @@ body{
     top: -70px;
 }
 #cchild1{
-    width: 350px;
-    height: 300px;
+    width: 800px;
+    height: 50%px;
     border: solid 1px black;
+    position: relative;
+    bottom: 0;
  
 }
-#cchild2{
-    
-    width: 350px;
-    height: 300px;
-    border: solid 1px black;
-    
-     
-}
 
-#boxanswers{
-    width: 100%;
-    height: 250px;
-    background-color: #E1E1E2;
-    overflow:scroll;
-    /*overflow-x:hidden;*/
-    
-}
+
 
 #fchild1{
     width: 150px;
@@ -140,12 +128,16 @@ img{
 }
 
 
+#boxanswers{
+    border: #008CBA solid;
+}
+
 
 #searchButton {
-    background-color: white; 
+    background-color: rgb(194, 184, 184); 
     color: black; 
     border: 2px solid #008CBA;
-    width: 80px;
+    width: 200px;
     height: 25px;
     position: relative;
     
