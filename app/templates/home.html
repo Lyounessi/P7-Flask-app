@@ -5,9 +5,10 @@
         <meta charset="utf-8" />
         <title>PyBot</title>
         <link rel="stylesheet" href='{{ url_for("static",filename = "css/template.css")}}'>
-        <link rel="stylesheet" media="screen and (max-widdth: 1280px)" href="#">
         <link rel="icon" href='{{ url_for("static",filename = "img/pybot.png")}}'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script  type = "text/javascript" src="{{ url_for('static', filename = 'js/bot.js')}}"></script>
 
     </head>
 
@@ -25,7 +26,7 @@
             <div class="middle">
                 <div id = "cchild1">
                 <div id="map"></div>
-                <div id = "boxanswers"><p id="mediawiki"></p></div>
+                <div id = "boxanswers"><p id="mediawiki">{{response}}</p></div>
                     <form method="POST"  action="/" id="chatForm">
                             <input type="text" name="ask" id = "searchbar"/>
                             <button type="submit" id = "searchButton">Envoyer</button>

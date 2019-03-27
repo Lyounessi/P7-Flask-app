@@ -12,9 +12,10 @@ def index():
     
     if request.method == 'POST':
         MyApp = bot.App(request.form['ask'])
-        MyApp.GooglGeo()
-        MyApp.GooglMapFrame()
+        #MyApp.GooglGeo()
+        #MyApp.GooglMapFrame()
         MyApp.ReadSW()
+        MyApp.MediaFile()
         return render_template('home.html', response = MyApp.MediaWiki())
                     
     else:

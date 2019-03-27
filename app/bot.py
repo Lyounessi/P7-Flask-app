@@ -1,7 +1,6 @@
 """The Application central_bot's file"""
 from flask import Flask
 from flask import render_template, request
-import os
 import urllib.parse
 import requests
 
@@ -45,11 +44,30 @@ class App():
                   "namespace": "0",
                   "format": "json"}
         
-        ResultUrl = requests.get(url=base_url, params=params_url)
+        self.ResultUrl = requests.get(url=base_url, params=params_url)
+        if self.ResultUrl.json()[2][0] == '':
+            self.ResultUrl.json()[2][0] = " Désolé On a rien trouvés sur la plateform Mediawiki concernant votre recerche sur "+ self.result
+    
+        return  "Pybot :"+"  Voila une petite histoire sur "+ self.result[0] + ' "'+self.ResultUrl.json()[2][0]+'".'
+    
+    def MediaFile(self):
+        self.MediaWiki()
+
+        listContent = []
+        with open("app/mediaAnswer.txt", "r") as fileContent:
+            for line in fileContent:
+                listContent.append(line)
         
-    
-        return  "Pybot :"+"  Voila une petite histoire sur "+ self.result[0] + ' "'+ResultUrl.json()[2][0]+'".'
-    
+        with open("app/mediaAnswer.txt", 'w') as f:
+     
+            if len(listContent) == 0:
+                f.write(self.ResultUrl.json()[2][0])
+            else:
+                f.write('')
+                f.write(self.ResultUrl.json()[2][0])
+
+
+
     def GooglGeo(self):
         """Geting the Geaoinformations about the user's task entred"""
         self.SelectWord()
